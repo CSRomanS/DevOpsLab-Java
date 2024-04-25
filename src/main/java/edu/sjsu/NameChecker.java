@@ -16,7 +16,7 @@ public class NameChecker {
         if(input.length() < 2 && input.length() > 40){
             return false;
         }
-        Pattern pattern = Pattern.compile("[a-z]+[-]?[a-z']*", Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile("[a-z]+[-']?[a-z]*", Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(input);
         if(matcher.matches())
             return true;
