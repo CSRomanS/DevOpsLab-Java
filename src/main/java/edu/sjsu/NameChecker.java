@@ -1,4 +1,6 @@
 package edu.sjsu;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class NameChecker {
     /**
@@ -11,8 +13,15 @@ public class NameChecker {
      * @return True if input is a valid name, else false
      */
     public static boolean check(String input) {
-        // TODO: implement
-
-        return false;
+        if(input.length() < 2 && input.length > 40){
+            return false;
+        }
+        Pattern pattern = Pattern.compile("[a-z]+[-]?[a-z']*", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(input);
+        if(matcher.matches())
+            return true;
+        else:
+            return false;
+        return true;
     }
 }
