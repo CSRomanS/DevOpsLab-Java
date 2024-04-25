@@ -20,7 +20,7 @@ public class NameChecker {
         Matcher matcher = pattern.matcher(input);
         if(matcher.matches())
             return true;
-        else:
+        else
             return false;
         return true;
     }
