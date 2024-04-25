@@ -13,7 +13,7 @@ public class NameChecker {
      * @return True if input is a valid name, else false
      */
     public static boolean check(String input) {
-        if(input.length() < 2 && input.length() > 40){
+        if(input.length() < 2 || input.length() > 40){
             return false;
         }
         Pattern pattern = Pattern.compile("[a-z]+[-']?[a-z]*", Pattern.CASE_INSENSITIVE);
